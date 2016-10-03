@@ -1,1 +1,1 @@
-web: gunicorn plot-generator.wsgi
+web: gunicorn imdb_plot_generator.wsgi
