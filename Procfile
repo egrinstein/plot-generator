@@ -1,1 +1,1 @@
-web: gunicorn myapp.wsgi
+web: gunicorn plot-generator.wsgi
