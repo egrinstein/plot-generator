@@ -18,13 +18,13 @@ class TripleToWordManager(TripleToWord):
         return next_word
 
 class StartTripleManager(StartTriple):
-    start_triples = None
-    def new_start_triple():
-        if not start_triples:
-            query = StartTriple.objects.all()
-            start_triples = []
-            for row in query:
-                start_triples.append(row) #transform row into 
-                                                #sth pythonesque
+    def new_start_triple(self):
+        start_triples = []
+        
+        query = StartTriple.objects.all()
+        start_triples = []
+        for row in query:
+            start_triples.append(row) #transform row into 
+                                      #sth pythonesque
         while True:
             yield choice(start_triples)

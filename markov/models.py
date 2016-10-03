@@ -12,7 +12,7 @@ class TripleToWord(models.Model):
     next_word = models.TextField(blank=False,null=False)
     frequency = models.IntegerField(default=0)
 
-class StarTriple(models.Model):
+class StartTriple(models.Model):
     word1 = models.TextField(blank=False,null=False)
     word2 = models.TextField(blank=False,null=False)
     word3 = models.TextField(blank=False,null=False)
