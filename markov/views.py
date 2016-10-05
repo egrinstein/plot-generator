@@ -8,8 +8,8 @@ def new_plot(request):
     if request.method == 'GET':
 
         text =  generate_random_text() 
-        data  = text
+        data  = {'text':text}
     
-        return HttpResponse(data,content_type="application/json")
+        return HttpResponse(json.dumps(data),content_type="application/json")
     else:
         return HttpResponse("Bro wrong request type.")
