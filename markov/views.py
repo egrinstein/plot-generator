@@ -5,7 +5,7 @@ from managers import *
 import json
 
 def new_plot(request):
-    if request.method == 'POST':
+    if request.method == 'GET':
 
         text =  generate_random_text() 
         data  = {'text':text}
