@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import JsonResponse,Http404
+from django.http import HttpResponse,Http404
 from models import * 
 from managers import *
 import json
@@ -7,7 +7,7 @@ import json
 def new_plot(request):
     
     text =  generate_random_text() 
-    data = {'text':text}
+    data  = text
     
-    return JsonResponse(data,content_type="application/json")
+    return HttpResponse(data,content_type="application/json")
 
