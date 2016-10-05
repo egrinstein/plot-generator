@@ -25,7 +25,7 @@ SECRET_KEY = '4c*0@_k)ll=%)fc#0a9mzw=bw-voyl!=b*^nuj8@&w&-7gaf=_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['imdb-plot-generator.herokuapp.com']
+ALLOWED_HOSTS = ['imdb-plot-generator.herokuapp.com','http://egrinstein.github.io']
 
 
 # Application definition
