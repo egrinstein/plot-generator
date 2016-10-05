@@ -6,7 +6,6 @@ from managers import *
 def new_plot(request):
     
     text =  generate_random_text() 
-    print(text)
 
-    return JsonResponse({'text':text})
+    return JsonResponse({'text':text},content_type = "application/json")
 
