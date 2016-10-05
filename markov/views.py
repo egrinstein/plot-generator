@@ -5,9 +5,11 @@ from managers import *
 import json
 
 def new_plot(request):
-    
-    text =  generate_random_text() 
-    data  = text
-    
-    return HttpResponse(data,content_type="application/json")
+    if request.method == 'GET':
 
+        text =  generate_random_text() 
+        data  = text
+    
+        return HttpResponse(data,content_type="application/json")
+    else:
+        return HttpResponse("Bro wrong request type.")
