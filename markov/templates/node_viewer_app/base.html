@@ -1,0 +1,32 @@
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>lone.biz: teach computers, support free games</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/static/js/nv-ajax.js"></script>
+  </head>
+  
+  <body>
+    <div class="hero">
+      <img width=256 src="http://lone.biz/circle.png">
+      <h1 class="hero-title" >lone.biz</h1>
+      <div class="hero-strap"> Teach computers. Support free games.</div>
+    </div>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+
+    </div>
+
+
+  </body>
+</html>

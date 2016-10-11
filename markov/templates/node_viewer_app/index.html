@@ -1,0 +1,8 @@
+{% extends 'node_viewer_app/base.html' %}
+
+{% block content %}
+    <form action="{% url 'new_label' %}" method="get">
+        <input type="submit" class="btn btn-default left-margin-100px right-margin-100px" name="new_label"
+            value="Random Product -- See Suggestions">
+    </form>
+{% endblock %}

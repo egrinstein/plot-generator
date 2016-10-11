@@ -1,0 +1,82 @@
+{% extends 'node_viewer_app/base.html' %}
+
+{% block content %}
+
+
+
+
+<form action="{% url 'new_label' %}" method="get">
+<input type="submit" class="btn btn-default" value="See Another Product">
+</form>
+
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="current-item col-md-5" label="{{product.label}}">
+            <div class="item-container">
+                
+                <img src="{{ product.images }}" class="img-circle img-responsive" alt="{{product.label}}">
+
+            </div>  
+        </div>
+        
+
+        <div class="comparison-item col-md-5" label="">
+                       
+                <div class="div-feedback">
+                    <div class="col-sm-4 btn-vert-block">
+                        <button class="btn-feedback btn btn-block" value="pattern">
+                                Pattern
+                        </button>
+                    </div>
+                    <div class="col-sm-4 btn-vert-block">
+                        <button class="btn-feedback btn btn-block" value="shape">
+                                Shape
+                        </button>
+                      
+                    </div>
+                    <div class="col-sm-4 btn-vert-block">
+                        <button class="btn-feedback btn btn-block"  value="color">
+                                Color
+                        </button>
+                    </div>
+                    
+                    <div class="compare-img">
+                        <img src="" class="img-circle img-responsive" alt=""/>
+                    </div>
+                </div>
+
+        </div>
+        <div class="col-md-2 skip-button">
+             <button class="btn" value="next">
+                Next &rarr;
+            </button>
+        </div>
+
+    </div>
+
+
+
+<div class="row backlog">
+
+
+    
+    {% for p in neighbors %}  
+        <div class="col-md-2">
+            <a href="../../label/{{p.label}}">
+                <img src="{{ p.images }}" class="img-circle img-responsive" alt="{{p.label}}"/>
+            </a>
+
+        </div>
+    
+
+{% endfor %}  
+</div>
+
+</div>
+{% endblock %}
+
+
